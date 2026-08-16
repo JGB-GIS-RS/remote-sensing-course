@@ -4,7 +4,7 @@ Esta guía documenta la arquitectura académica del curso y la lógica de la **S
 
 ## Documentos de referencia
 
-- [`Guía para autores · Serie Técnica de Teledetección`](guia_para_autores.md) — versión 0.9 para revisión.
+- [`Guía para autores · Serie Técnica de Teledetección`](guia_para_autores.md) — **versión 1.0 · norma editorial oficial**.
 - [`Normas editoriales`](../normas_editoriales/README.md).
 - [`Rúbricas`](../rubricas/README.md).
 
