@@ -1,0 +1,29 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+~$*.docx
+~$*.xlsx
+
+# Local data not intended for version control
+data_local/
+outputs_local/
