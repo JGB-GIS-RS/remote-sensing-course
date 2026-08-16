@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these teaching resources, please cite this repository."
+title: "Remote Sensing Course · Serie Técnica de Teledetección"
+type: software
+authors:
+  - family-names: "Garzón Barrero"
+    given-names: "Julián"
+    affiliation: "Universidad del Quindío"
+repository-code: "https://github.com/JGB-GIS-RS/remote-sensing-course"
+license: CC0-1.0
+version: "0.1.0"
+date-released: 2026-08-16
+keywords:
+  - remote sensing
+  - teledetección
+  - geomatics
+  - geographic information systems
+  - reproducible education
+  - technical reports
