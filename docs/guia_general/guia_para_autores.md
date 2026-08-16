@@ -2,13 +2,26 @@
 
 **Programa de Ingeniería Topográfica y Geomática · Universidad del Quindío**  
 **Asignatura:** Teledetección  
-**Versión:** 0.9 · borrador para revisión
+**Versión:** 1.0 · norma editorial oficial
 
-Esta guía establece las normas comunes para la preparación de los **Informes Técnicos de la Serie Técnica de Teledetección**. Cada TAREA puede definir requisitos adicionales, pero no debe contradecir estas reglas generales.
+Esta guía establece las normas comunes para la preparación de los **Informes Técnicos de la Serie Técnica de Teledetección**. Cada TAREA define su problema, evidencias y requisitos técnicos particulares, pero los informes conservan una identidad metodológica y editorial común.
 
-El propósito de la Serie no es reproducir el formato de un taller académico. Cada informe debe presentar un problema técnico de teledetección, justificar las decisiones metodológicas, producir evidencia verificable, reconocer sus limitaciones y convertir los resultados en una conclusión y, cuando corresponda, en una recomendación profesional.
+El propósito de la Serie no es reproducir el formato de un taller académico. Cada informe debe presentar un problema técnico de teledetección, justificar las decisiones metodológicas, producir evidencia verificable, reconocer sus limitaciones y convertir los resultados en conclusiones y en una recomendación profesional.
 
 > **Se evalúan decisiones técnicamente sustentadas, no secuencias de botones.**
+
+---
+
+## 0. Aplicación y jerarquía documental
+
+Esta guía constituye la norma editorial común de la Serie. Para interpretar correctamente los materiales de una TAREA se aplicará la siguiente función documental:
+
+- **Guía para autores:** establece las reglas editoriales y de comunicación científica comunes a toda la Serie.
+- **Enunciado de la TAREA o del caso:** define el problema técnico, los datos suministrados, la evidencia obligatoria, las restricciones y, cuando se indique expresamente, excepciones operativas como extensión o archivos de entrega.
+- **Rúbrica:** establece los criterios y ponderaciones con los que se evaluará el trabajo; no sustituye el enunciado ni crea por sí sola nuevos productos obligatorios.
+- **Plantilla oficial:** materializa la composición visual del informe —márgenes, estilos, jerarquías tipográficas, encabezados, numeración y disposición general— y debe conservarse.
+
+Ante una diferencia aparente, una **excepción explícita del enunciado de la TAREA** prevalece para ese caso concreto. En ausencia de una excepción expresa se aplica esta guía. Para aspectos exclusivamente de maquetación prevalece la plantilla oficial.
 
 ---
 
@@ -23,6 +36,8 @@ El producto corresponde a un **artículo/informe técnico corto**, de redacción
 - explícito respecto de alcance, supuestos, limitaciones e incertidumbre.
 
 Un informe no mejora por incluir más texto, más mapas, más software o más procedimientos. Todo elemento debe cumplir una función metodológica, probatoria o argumentativa.
+
+El idioma principal de la Serie es **español**, salvo que una TAREA autorice expresamente otro idioma. Los términos técnicos en inglés, siglas y nombres oficiales de productos o algoritmos se manejarán según las reglas de esta guía.
 
 ---
 
@@ -45,9 +60,13 @@ Ambos autores deben poder explicar y defender el flujo metodológico completo de
 
 ## 3. Extensión y formato
 
-Como norma general, el informe tendrá una extensión máxima de **8 páginas**, incluidas figuras, tablas y referencias, salvo que el enunciado de una TAREA establezca expresamente otra condición.
+Como norma general, el informe tendrá una extensión máxima de **8 páginas**, salvo que el enunciado de una TAREA establezca expresamente otra condición.
 
-No se utilizarán anexos para eludir el límite de extensión. Los scripts, datos derivados, archivos auxiliares y otros materiales reproducibles deben entregarse por separado o mediante el repositorio/enlace definido para la TAREA.
+El límite corresponde al **PDF completo**, desde la primera página que contiene el título y los autores hasta la última página de Referencias. Por tanto, cuentan dentro de la extensión el Resumen, las Palabras clave, todas las secciones del cuerpo, figuras, tablas, Disponibilidad de datos y código y Referencias.
+
+No existe una distribución obligatoria de páginas entre secciones. Cada apartado debe ocupar el espacio necesario para cumplir su función dentro del límite global.
+
+Los anexos **no forman parte ordinaria de la Serie** y no se utilizarán para eludir el límite de extensión. Solo se incluirán cuando el enunciado de la TAREA los solicite expresamente. Los scripts, datos derivados, archivos auxiliares y otros materiales reproducibles se entregarán por separado o mediante el repositorio/enlace definido para la TAREA.
 
 La plantilla oficial de la Serie deberá conservarse sin alterar arbitrariamente:
 
@@ -63,21 +82,33 @@ No se debe ampliar texto para rellenar espacios producidos por la maquetación. 
 
 ## 4. Arquitectura editorial común
 
-Los grandes apartados permanecen estables en toda la Serie:
+La estructura principal permanece estable en toda la Serie.
 
-1. **Resumen**
-2. **Palabras clave**
-3. **1. Introducción**
-4. **2. Área de estudio y datos**
-5. **3. Metodología**
-6. **4. Resultados**
-7. **5. Discusión**
-8. **6. Recomendación técnica**
-9. **7. Conclusiones**
-10. **Disponibilidad de datos y código**
-11. **Referencias**
+### Elementos preliminares no numerados
+
+- **Título**
+- **Autores**
+- **Resumen**
+- **Palabras clave**
+
+### Secciones numeradas
+
+1. **Introducción**
+2. **Área de estudio y datos**
+3. **Metodología**
+4. **Resultados**
+5. **Discusión**
+6. **Recomendación técnica**
+7. **Conclusiones**
+
+### Elementos finales no numerados
+
+- **Disponibilidad de datos y código**
+- **Referencias**
 
 Las **subsecciones** se adaptan a la naturaleza de cada TAREA. No deben conservarse subsecciones de otro informe cuando no sean pertinentes.
+
+La **Recomendación técnica forma parte de todos los informes de la Serie**. Su contenido cambia según la TAREA, pero siempre debe transformar la evidencia obtenida en una decisión profesional técnicamente condicionada.
 
 ---
 
@@ -313,6 +344,8 @@ Las figuras se numeran consecutivamente como **Figura 1, Figura 2, ...** y deben
 
 Toda figura debe cumplir una función analítica. Se evitarán imágenes decorativas, capturas de pantalla y gráficos que no aporten evidencia necesaria.
 
+No existe una cuota general de figuras por informe. El número de figuras debe responder al problema y a las evidencias exigidas por la TAREA.
+
 ### 14.3. Pie de figura
 
 El pie debe ser autosuficiente e indicar, según corresponda:
@@ -358,6 +391,8 @@ Las tablas deben:
 - utilizar notas únicamente cuando sean necesarias.
 
 El texto no debe reproducir fila por fila los valores de una tabla. Debe destacar patrones, diferencias e implicaciones.
+
+No existe una cuota general de tablas por informe. Se incluirán únicamente las necesarias para sintetizar información que no se comunique mejor mediante texto o figuras.
 
 ---
 
@@ -413,7 +448,7 @@ No se crearán abreviaturas para conceptos utilizados una sola vez o pocas veces
 
 ---
 
-## 18. Citación y referencias
+## 18. Citación, referencias y calidad de las fuentes
 
 La Serie utiliza una **variante IEEE compacta**.
 
@@ -433,7 +468,16 @@ Las referencias deberán:
 - incluir DOI cuando exista;
 - conservar consistencia tipográfica y bibliográfica.
 
-Se priorizarán artículos científicos, documentación oficial de misiones/sensores/productos, manuales técnicos, estándares y fuentes institucionales pertinentes. Blogs, páginas comerciales y materiales sin trazabilidad no deben utilizarse como soporte principal de afirmaciones científicas.
+La elección de la fuente debe corresponder al tipo de afirmación que se desea sustentar:
+
+- **mecanismos físicos, respuesta espectral, relaciones biofísicas, comportamiento de métodos y antecedentes científicos:** literatura científica revisada por pares;
+- **bandas, resoluciones, calibración, factores de escala, niveles de procesamiento, QA y especificaciones de productos:** documentación oficial de la misión, sensor, producto o agencia responsable;
+- **colecciones, funciones, sintaxis o comportamiento de una plataforma computacional:** documentación oficial de la plataforma o API correspondiente;
+- **límites, estadísticas territoriales, inventarios o información administrativa:** fuente institucional responsable de producir esos datos.
+
+Los catálogos de plataformas como Google Earth Engine pueden documentar una colección o su implementación, pero no sustituyen por sí solos la literatura científica necesaria para sustentar una interpretación física o biofísica.
+
+Blogs, tutoriales, videos, páginas comerciales y materiales sin trazabilidad pueden ser útiles durante el aprendizaje, pero no deben constituir el soporte principal de afirmaciones científicas o metodológicas relevantes.
 
 No se incluirán referencias que no hayan sido citadas en el texto.
 
@@ -455,6 +499,8 @@ Debe indicar, según corresponda:
 - restricciones de acceso o licenciamiento, si existen.
 
 No es necesario adjuntar grandes colecciones satelitales que puedan recuperarse de una fuente oficial. Sí debe proporcionarse información suficiente para volver a identificarlas y obtenerlas.
+
+Cuando una evidencia central del informe dependa de código desarrollado o modificado por los autores, ese código deberá formar parte del material reproducible entregado. Si el flujo depende principalmente de una interfaz gráfica, deberán documentarse los parámetros y decisiones necesarios para reconstruirlo.
 
 Los productos de terceros conservan sus licencias y términos de uso originales.
 
@@ -482,15 +528,37 @@ Los autores siguen siendo responsables de verificar:
 - referencias y DOI;
 - conclusiones y recomendaciones.
 
+### 20.1. Uso que debe declararse
+
+Debe declararse el uso de IA cuando haya contribuido de manera sustantiva a uno o más de los siguientes componentes del trabajo:
+
+- generación o reformulación de texto que permanezca sustancialmente en el informe;
+- generación, modificación o depuración de código utilizado para producir resultados;
+- apoyo en la selección o diseño del método;
+- interpretación de resultados;
+- traducción extensa de contenido incorporado al manuscrito;
+- generación o edición sustantiva de diagramas, esquemas u otros productos incorporados al informe.
+
+La declaración debe identificar brevemente **la herramienta y el propósito del uso**, no reproducir conversaciones completas ni incluir los prompts salvo que la TAREA lo solicite.
+
+### 20.2. Uso menor que no requiere declaración
+
+No requiere declaración el uso limitado a corrección ortográfica, búsqueda de sinónimos, ajustes tipográficos o funciones equivalentes de edición que no aporten contenido intelectual sustantivo.
+
+### 20.3. Usos no aceptados
+
 No se acepta:
 
 - presentar como propia una interpretación que los autores no puedan explicar;
 - utilizar referencias inventadas o no verificadas;
 - incorporar resultados, cifras o procedimientos generados sin comprobación;
 - utilizar IA para fabricar evidencia empírica inexistente;
-- ocultar un uso de IA que haya intervenido materialmente en la elaboración del informe.
+- presentar imágenes, firmas espectrales, mapas, datos, mediciones o resultados generados artificialmente como si constituyeran observaciones empíricas de teledetección;
+- ocultar un uso de IA que deba declararse conforme a esta sección.
 
-Cuando se haya utilizado IA generativa de manera material en la elaboración del informe, deberá declararse brevemente su propósito al final de **Disponibilidad de datos y código**. Una declaración de uso no exime de responsabilidad a los autores ni modifica los criterios técnicos de evaluación.
+Cuando se haya utilizado IA generativa de manera declarable, su propósito se indicará brevemente al final de **Disponibilidad de datos y código**. Una declaración de uso no exime de responsabilidad a los autores ni modifica los criterios técnicos de evaluación.
+
+Esta política complementa las normas institucionales de integridad académica vigentes y no las sustituye.
 
 ---
 
@@ -511,13 +579,17 @@ La reutilización de trabajos previos propios o de terceros debe ser declarada y
 
 ## 22. Archivos de entrega
 
-Salvo indicación diferente en la TAREA, el paquete de entrega deberá permitir evaluar el informe y reproducir sus evidencias principales. Se recomienda incluir:
+Salvo indicación diferente en la TAREA, el paquete de entrega deberá permitir **evaluar el informe y reproducir sus evidencias principales**.
+
+El paquete incluirá, cuando correspondan al trabajo realizado:
 
 1. informe final en **PDF**;
-2. documento fuente editable cuando sea solicitado;
-3. scripts/notebooks desarrollados por el equipo;
-4. datos derivados no recuperables directamente desde una fuente oficial;
-5. archivo `README` o nota equivalente cuando sea necesario explicar la estructura del material reproducible.
+2. documento fuente editable, cuando sea solicitado;
+3. scripts/notebooks utilizados para producir evidencias o resultados;
+4. datos derivados necesarios para reproducir el análisis y que no puedan recuperarse directamente desde una fuente oficial;
+5. archivo `README` o nota equivalente cuando sea necesario explicar la estructura, dependencias o ejecución del material reproducible.
+
+La ausencia de código es válida cuando el procedimiento no lo requiera; en ese caso el informe deberá documentar suficientemente los parámetros y operaciones relevantes.
 
 El canal de entrega y la convención definitiva de nombres serán establecidos para cada TAREA o semestre.
 
@@ -526,6 +598,13 @@ El canal de entrega y la convención definitiva de nombres serán establecidos p
 ## 23. Lista de verificación antes de entregar
 
 Antes de enviar el informe, los autores deberán comprobar:
+
+### Formato y estructura
+- [ ] El PDF completo no supera el límite de páginas establecido.
+- [ ] Resumen y Palabras clave no están numerados.
+- [ ] Las secciones 1–7 conservan los grandes encabezados de la Serie.
+- [ ] Disponibilidad de datos y código y Referencias aparecen como secciones finales no numeradas.
+- [ ] No se utilizaron anexos salvo autorización expresa de la TAREA.
 
 ### Problema y método
 - [ ] El objetivo está formulado de forma explícita.
@@ -549,10 +628,16 @@ Antes de enviar el informe, los autores deberán comprobar:
 ### Escritura y fuentes
 - [ ] Las siglas están definidas correctamente.
 - [ ] La notación, unidades, rangos y decimales son consistentes.
+- [ ] Cada afirmación importante utiliza un tipo de fuente adecuado.
 - [ ] Todas las referencias citadas aparecen en la bibliografía y viceversa.
 - [ ] Los DOI y datos bibliográficos han sido verificados.
 - [ ] El texto no contiene prosa de relleno ni afirmaciones sin soporte.
-- [ ] El uso material de IA generativa, si existió, está declarado.
+- [ ] El uso declarable de IA generativa, si existió, está documentado.
+
+### Reproducibilidad
+- [ ] Los scripts utilizados para producir evidencia central están incluidos cuando corresponde.
+- [ ] Los datos derivados necesarios están disponibles o documentados.
+- [ ] Un tercero técnicamente competente podría reconstruir las decisiones esenciales del análisis.
 
 ---
 
@@ -566,4 +651,4 @@ Cuando un elemento no contribuye a esa cadena, debe reconsiderarse su inclusión
 
 ---
 
-**Estado del documento:** versión 0.9 para revisión antes de su adopción como Guía para autores v1.0 de la Serie Técnica de Teledetección.
+**Estado del documento:** Guía para autores v1.0 · norma editorial oficial de la Serie Técnica de Teledetección.
