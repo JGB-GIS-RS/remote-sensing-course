@@ -1,32 +1,36 @@
 # Rúbricas · Serie Técnica de Teledetección
 
-Esta carpeta alojará la rúbrica común de la Serie Técnica y los componentes específicos de cada TAREA.
+Esta carpeta reúne las rúbricas públicas de evaluación de la **Serie Técnica de Teledetección**.
 
-## Arquitectura prevista
+## Rúbricas disponibles
 
-La evaluación combinará un **núcleo común** con criterios específicos asociados al problema técnico de cada TAREA.
+- [`T1_rubrica.md`](T1_rubrica.md) — **TAREA 1 · Diseño de una estrategia de observación remota**. Versión 1.0.
 
-### Núcleo común
+Las rúbricas de T2, T3 y T4 se incorporarán únicamente cuando cada TAREA haya sido metodológicamente cerrada.
 
-1. Formulación del problema técnico.
-2. Selección y comprensión de los datos.
-3. Rigor metodológico.
-4. Reproducibilidad.
-5. Validación o evidencia de calidad, cuando corresponda.
-6. Figuras, tablas y cartografía.
-7. Análisis de resultados.
-8. Discusión, alcance e incertidumbre.
-9. Conclusiones.
-10. Recomendación técnica.
-11. Escritura científico-técnica.
-12. Cumplimiento editorial.
-13. Referencias y trazabilidad de fuentes.
-14. Integridad académica.
+## Arquitectura general
 
-## Principio
+La evaluación combina dos componentes:
 
-La rúbrica no premiará extensión, ornamentación ni uso de herramientas por sí mismos. La calificación debe reflejar la calidad de las decisiones, la solidez de la evidencia y la coherencia entre problema, método, resultados e interpretación.
+1. **Núcleo técnico específico de la TAREA**, asociado a las decisiones metodológicas que debe resolver cada caso.
+2. **Criterios transversales**, asociados a discusión, alcance e incertidumbre, calidad de la evidencia, reproducibilidad y comunicación científico-técnica.
 
-## Estado
+## Principio de evaluación
 
-La ponderación y los descriptores de desempeño permanecen **en desarrollo**. No deben interpretarse todavía como la rúbrica oficial de calificación.
+> **Se evalúan decisiones técnicamente sustentadas, no secuencias de botones.**
+
+La calificación refleja la calidad de la formulación del problema, el rigor de la evidencia, la coherencia metodológica, la interpretación de resultados y la capacidad para transformar la evidencia en una recomendación técnica defendible.
+
+No se premian por sí mismos la extensión, la ornamentación, la complejidad del software ni la utilización de una herramienta específica.
+
+## Escala común
+
+Las rúbricas utilizan una escala de 0 a 5 con cinco niveles de referencia:
+
+- **Sobresaliente:** 4.5–5.0
+- **Sólido:** 3.8–4.4
+- **Aceptable:** 3.0–3.7
+- **Insuficiente:** 1.0–2.9
+- **Sin evidencia:** 0
+
+Los descriptores específicos de cada TAREA determinan qué significa cada nivel para el criterio evaluado.
