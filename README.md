@@ -8,10 +8,10 @@ El curso se organiza mediante problemas técnicos que exigen justificar decision
 
 | TAREA | Núcleo técnico | Pregunta guía |
 |---|---|---|
-| **T1 · Observación** | Fundamentos, sensores y estrategia de observación | ¿Cómo debe observarse el fenómeno? |
-| **T2 · Cambio biofísico** | Variables derivadas y análisis espacio-temporal | ¿Qué información biofísica puede derivarse y cómo cambia? |
-| **T3 · Transformaciones** | Composiciones, índices, PCA y Tasseled Cap | ¿Qué representación espectral caracteriza mejor el territorio? |
-| **T4 · Clasificación y modelado** | Clasificación, validación y modelación de cambio | ¿Cómo clasificar, validar y modelar el cambio territorial? |
+| [**T1 · Observación**](tareas/T1_observacion/) | Fundamentos, sensores y estrategia de observación | ¿Cómo debe observarse el fenómeno? |
+| [**T2 · Cambio biofísico**](tareas/T2_cambio_biofisico/) | Variables derivadas y análisis espacio-temporal | ¿Qué información biofísica puede derivarse y cómo cambia? |
+| [**T3 · Transformaciones**](tareas/T3_transformaciones/) | Composiciones, índices, PCA y Tasseled Cap | ¿Qué representación espectral caracteriza mejor el territorio? |
+| [**T4 · Clasificación y modelado**](tareas/T4_clasificacion_modelado/) | Clasificación, validación y modelación de cambio | ¿Cómo clasificar, validar y modelar el cambio territorial? |
 
 La progresión general es:
 
@@ -33,6 +33,13 @@ Los informes conservan una estructura editorial común:
 
 Las subsecciones se adaptan al problema específico de cada TAREA.
 
+Documentación del curso:
+
+- [Guía general](docs/guia_general/)
+- [Normas editoriales](docs/normas_editoriales/)
+- [Marco de rúbricas](docs/rubricas/)
+- [Plantilla de la Serie Técnica](template/)
+
 ## Primer caso disponible
 
 ### T1-CAF-001 · Sistemas cafeteros del Quindío
@@ -41,17 +48,30 @@ Las subsecciones se adaptan al problema específico de cada TAREA.
 
 El caso evalúa la pertinencia de diferentes sistemas de teledetección pasiva mediante el análisis conjunto de respuesta espectral, escala espacial, disponibilidad temporal efectiva y características de los productos de datos.
 
-Ruta: [`tareas/T1_observacion/casos/T1-CAF-001`](tareas/T1_observacion/casos/T1-CAF-001/)
+- [Enunciado del caso](tareas/T1_observacion/casos/T1-CAF-001/)
+- [Datos de disponibilidad óptica](tareas/T1_observacion/casos/T1-CAF-001/datos/)
+- [Script reproducible de auditoría en GEE](tareas/T1_observacion/casos/T1-CAF-001/scripts/auditoria_disponibilidad_optica_gee.js)
+- [Referencias del caso](tareas/T1_observacion/casos/T1-CAF-001/referencias/)
 
 ## Organización del repositorio
 
 ```text
 remote-sensing-course/
-├── docs/                 # Guías, normas editoriales y rúbricas
-├── template/             # Plantilla de la Serie Técnica
-├── tareas/               # T1–T4 y banco de casos
-├── scripts/              # Flujos reproducibles de GEE/Python
-└── examples/             # Ejemplos docentes y productos de referencia
+├── docs/
+│   ├── guia_general/
+│   ├── normas_editoriales/
+│   └── rubricas/
+├── template/
+├── tareas/
+│   ├── T1_observacion/
+│   ├── T2_cambio_biofisico/
+│   ├── T3_transformaciones/
+│   └── T4_clasificacion_modelado/
+├── scripts/
+│   ├── gee/
+│   └── python/
+└── examples/
+    └── informe_tecnico_02/
 ```
 
 ## Principio de evaluación
@@ -64,9 +84,13 @@ Un producto cartográfico o computacional solo constituye evidencia cuando la se
 
 Los casos pueden incluir datos derivados, scripts y documentación necesaria para reproducir los análisis. Las fuentes externas deben conservar su atribución y condiciones de uso originales.
 
-## Licencia
+Los archivos de un caso deben permitir reconstruir, hasta donde lo permitan las fuentes externas, la cadena:
 
-Este repositorio conserva la licencia definida en [`LICENSE`](LICENSE). Los datos de terceros mantienen sus propias licencias y términos de uso.
+`datos → procesamiento → evidencia → interpretación → decisión`
+
+## Citación y licencia
+
+El repositorio incluye metadatos de citación en [`CITATION.cff`](CITATION.cff) y conserva la licencia definida en [`LICENSE`](LICENSE). Los datos de terceros mantienen sus propias licencias y términos de uso.
 
 ---
 
