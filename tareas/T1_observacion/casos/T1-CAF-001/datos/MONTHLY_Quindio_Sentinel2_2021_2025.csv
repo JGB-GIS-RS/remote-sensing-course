@@ -1,0 +1,13 @@
+system:index,month,raw_images,region,sensor,unique_dates,valid_obs_median,valid_obs_p10,valid_obs_p90,.geo
+0,1.0,137,Quindio,Sentinel-2,46,8.148204099368545,2.4515253650029023,21.36799693750598,"{""type"":""MultiPoint"",""coordinates"":[]}"
+1,2.0,133,Quindio,Sentinel-2,38,5.248836245547725,1.0,16.0,"{""type"":""MultiPoint"",""coordinates"":[]}"
+2,3.0,133,Quindio,Sentinel-2,36,6.99630177907242,2.413481922760887,19.132242672119975,"{""type"":""MultiPoint"",""coordinates"":[]}"
+3,4.0,134,Quindio,Sentinel-2,38,6.0,2.4160324697937647,16.365034570971115,"{""type"":""MultiPoint"",""coordinates"":[]}"
+4,5.0,137,Quindio,Sentinel-2,37,4.186822627970712,1.0,12.0,"{""type"":""MultiPoint"",""coordinates"":[]}"
+5,6.0,140,Quindio,Sentinel-2,37,4.205931234174068,1.0,14.401281073661735,"{""type"":""MultiPoint"",""coordinates"":[]}"
+6,7.0,149,Quindio,Sentinel-2,43,5.4672457269774455,2.5466920872101135,14.518193992730055,"{""type"":""MultiPoint"",""coordinates"":[]}"
+7,8.0,152,Quindio,Sentinel-2,44,6.407414855024384,3.0000000000000004,19.000000000000004,"{""type"":""MultiPoint"",""coordinates"":[]}"
+8,9.0,141,Quindio,Sentinel-2,41,10.657894672932374,5.29772046972139,25.0,"{""type"":""MultiPoint"",""coordinates"":[]}"
+9,10.0,144,Quindio,Sentinel-2,38,7.000000000000002,2.307680349810818,19.087779422785182,"{""type"":""MultiPoint"",""coordinates"":[]}"
+10,11.0,141,Quindio,Sentinel-2,42,2.279152962771145,0.0,10.123691930101788,"{""type"":""MultiPoint"",""coordinates"":[]}"
+11,12.0,143,Quindio,Sentinel-2,39,6.239598046195372,2.397881405153505,19.417010970223675,"{""type"":""MultiPoint"",""coordinates"":[]}"
