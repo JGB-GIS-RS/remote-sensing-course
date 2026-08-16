@@ -2,6 +2,12 @@
 
 Esta guía documenta la arquitectura académica del curso y la lógica de la **Serie Técnica de Teledetección**.
 
+## Documentos de referencia
+
+- [`Guía para autores · Serie Técnica de Teledetección`](guia_para_autores.md) — versión 0.9 para revisión.
+- [`Normas editoriales`](../normas_editoriales/README.md).
+- [`Rúbricas`](../rubricas/README.md).
+
 ## Principio formativo
 
 El curso se organiza alrededor de problemas técnicos, no de secuencias de software. La evaluación prioriza la capacidad del estudiante para formular el problema, seleccionar y comprender los datos, justificar el método, producir evidencia, reconocer incertidumbre y convertir los resultados en una decisión técnica.
