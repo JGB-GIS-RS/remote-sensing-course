@@ -1,4 +1,4 @@
-# T1-CAF-001 · Diseño de una estrategia de observación remota para sistemas cafeteros del Quindío
+# T1-CAF-001 · Diseño de una estrategia de observación remota para cultivos de café en el Quindío
 
 **Serie Técnica de Teledetección · Informe Técnico No. 01**
 
@@ -6,7 +6,7 @@
 
 La caficultura del Quindío se desarrolla en un paisaje andino caracterizado por relieve complejo, alta heterogeneidad espacial, unidades productivas de diferentes tamaños, coexistencia con otras coberturas vegetales y una disponibilidad de observaciones ópticas condicionada por la nubosidad.
 
-Se requiere diseñar una **estrategia de observación remota** que permita caracterizar y realizar seguimiento de los sistemas cafeteros mediante teledetección pasiva.
+Se requiere diseñar una **estrategia de observación remota** que permita caracterizar y realizar seguimiento de los cultivos de café mediante teledetección pasiva.
 
 La selección de una plataforma, sensor o producto no deberá fundamentarse exclusivamente en especificaciones nominales como resolución espacial, número de bandas o frecuencia de revisita. La pertinencia de la estrategia dependerá de la relación entre:
 
@@ -16,13 +16,13 @@ El problema no consiste en determinar qué sensor es “mejor”, sino en establ
 
 ## Desafío técnico
 
-> **¿Qué sistema o combinación de sistemas de teledetección pasiva resulta técnicamente más adecuado para caracterizar y realizar seguimiento de sistemas cafeteros en el departamento del Quindío, considerando la observabilidad espectral del fenómeno, la escala espacial, la disponibilidad temporal efectiva y las limitaciones de los productos disponibles?**
+> **¿Qué sistema o combinación de sistemas de teledetección pasiva resulta técnicamente más adecuado para caracterizar y realizar seguimiento de cultivos de café en el departamento del Quindío, considerando la observabilidad espectral del fenómeno, la escala espacial, la disponibilidad temporal efectiva y las limitaciones de los productos disponibles?**
 
 La respuesta deberá culminar en una **estrategia de observación técnicamente sustentada**. No existe una misión o sensor establecido previamente como respuesta correcta.
 
 ## Objetivo
 
-**Diseñar y justificar una estrategia de observación remota para sistemas cafeteros del Quindío mediante el análisis integrado de los requerimientos de observación, la respuesta espectral esperada, la adecuación espacial, la disponibilidad temporal efectiva y las capacidades y limitaciones de diferentes sistemas de teledetección pasiva.**
+**Diseñar y justificar una estrategia de observación remota para cultivos de café en el Quindío mediante el análisis integrado de los requerimientos de observación, la respuesta espectral esperada, la adecuación espacial, la disponibilidad temporal efectiva y las capacidades y limitaciones de diferentes sistemas de teledetección pasiva.**
 
 ## Sistemas de observación
 
@@ -140,7 +140,7 @@ Si se utilizan puntuaciones o ponderaciones, deberán explicarse y justificarse.
 
 El resultado fundamental de la TAREA será una:
 
-> **Estrategia de observación remota para sistemas cafeteros del Quindío.**
+> **Estrategia de observación remota para cultivos de café en el Quindío.**
 
 La estrategia deberá establecer, como mínimo:
 
@@ -256,7 +256,7 @@ Un informe técnicamente sólido podrá concluir que una misión es suficiente, 
 
 ## Pregunta integradora final
 
-> **Si usted fuera responsable de diseñar el sistema de observación de los sistemas cafeteros del Quindío, ¿qué información adquiriría, mediante qué sistema, con qué frecuencia y bajo qué condiciones confiaría en ella?**
+> **Si usted fuera responsable de diseñar el sistema de observación de los cultivos de café del Quindío, ¿qué información adquiriría, mediante qué sistema, con qué frecuencia y bajo qué condiciones confiaría en ella?**
 
 ---
 
