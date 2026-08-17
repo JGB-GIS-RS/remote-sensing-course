@@ -1,4 +1,4 @@
-# T1-CAF-001 · Diseño de una estrategia de observación remota para cultivos de café en el Quindío
+# T1-CAF-001 · Diseño de una estrategia de observación remota para cultivos de café en el departamento del Quindío
 
 **Serie Técnica de Teledetección · Informe Técnico No. 01**
 
