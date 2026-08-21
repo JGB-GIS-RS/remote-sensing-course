@@ -1,0 +1,2 @@
+region,sensor,script_version,method_id,data_source,aoi_asset,aoi_area_km2,start_date,end_date,start_year,end_year,raw_images,unique_dates,audit_scale_m,audit_crs,obs_definition,mask_definition,deduplication
+Quindio,Landsat,2.2,distinct_calendar_dates_at_valid_pixels,LANDSAT/LC08/C02/T1_L2 + LANDSAT/LC09/C02/T1_L2,users/juliangarzonb/limite_quindio,1940.5435774471816,2021-01-01,2025-12-31,2021,2025,173,173,250,EPSG:32618,unique_valid_calendar_dates_per_pixel,QA_PIXEL bits 0-5=0; QA_RADSAT=0; SR_B4 footprint,pixelwise_count_distinct_calendar_date_code
