@@ -19,7 +19,11 @@ La progresión general es:
 
 ## Serie Técnica de Teledetección
 
-Los informes conservan una estructura editorial común:
+Los informes conservan una arquitectura editorial común.
+
+**Elementos preliminares no numerados:** Título, Autores, Resumen y Palabras clave.
+
+**Secciones numeradas:**
 
 1. Introducción
 2. Área de estudio y datos
@@ -28,8 +32,8 @@ Los informes conservan una estructura editorial común:
 5. Discusión
 6. Recomendación técnica
 7. Conclusiones
-8. Disponibilidad de datos y código
-9. Referencias
+
+**Elementos finales no numerados:** Disponibilidad de datos y código; Referencias.
 
 Las subsecciones se adaptan al problema específico de cada TAREA.
 
@@ -39,17 +43,18 @@ Documentación del curso:
 - [Normas editoriales](docs/normas_editoriales/)
 - [Marco de rúbricas](docs/rubricas/)
 - [Plantilla de la Serie Técnica](template/)
+- [Ejemplo de Informe Técnico No. 02](examples/informe_tecnico_02/)
 
 ## Primer caso disponible
 
-### T1-CAF-001 · Sistemas cafeteros del Quindío
+### T1-CAF-001 · Cultivos de café en el Quindío
 
-**Diseño de una estrategia de observación remota para sistemas cafeteros del Quindío.**
+**Diseño de una estrategia de observación remota para cultivos de café en el departamento del Quindío.**
 
 El caso evalúa la pertinencia de diferentes sistemas de teledetección pasiva mediante el análisis conjunto de respuesta espectral, escala espacial, disponibilidad temporal efectiva y características de los productos de datos.
 
 - [Enunciado del caso](tareas/T1_observacion/casos/T1-CAF-001/)
-- [Datos de disponibilidad óptica](tareas/T1_observacion/casos/T1-CAF-001/datos/)
+- [Datos y cartografía](tareas/T1_observacion/casos/T1-CAF-001/datos/)
 - [Script reproducible de auditoría en GEE](tareas/T1_observacion/casos/T1-CAF-001/scripts/auditoria_disponibilidad_optica_gee.js)
 - [Referencias del caso](tareas/T1_observacion/casos/T1-CAF-001/referencias/)
 
