@@ -1,6 +1,6 @@
 # Datos · T1-CAF-001
 
-Esta carpeta reúne los resultados derivados de la **auditoría de disponibilidad óptica v2.2** para el departamento del Quindío durante 2021–2025.
+Esta carpeta reúne la cartografía base y los resultados derivados de la **auditoría de disponibilidad óptica v2.2** para el departamento del Quindío durante 2021–2025.
 
 La auditoría se diseñó para apoyar una decisión metodológica central del caso: distinguir entre la frecuencia nominal de revisita y la **disponibilidad temporal efectiva de observaciones útiles**.
 
@@ -22,6 +22,16 @@ PERIODS   = variación anual y semestral
 
 ## Archivos disponibles
 
+### Cartografía del área de estudio
+
+- [`limite_quindio.geojson`](limite_quindio.geojson): límite departamental suministrado para T1-CAF-001 y referencia espacial del AOI utilizado en la auditoría. El archivo está definido en **EPSG:32618**.
+
+En Google Earth Engine, la misma geometría se utiliza mediante el asset:
+
+`users/juliangarzonb/limite_quindio`
+
+El GeoJSON se suministra para elaboración cartográfica, inspección espacial y reproducibilidad del caso. No representa por sí mismo la distribución de cultivos de café dentro del departamento.
+
 ### Sentinel-2 · v2.2 validada
 
 - `INVENTORY_Quindio_Sentinel2.csv`
@@ -34,7 +44,7 @@ PERIODS   = variación anual y semestral
 - `MONTHLY_Quindio_Landsat_2021_2025.csv`
 - `PERIODS_Quindio_Landsat_2021_2025.csv`
 
-Los seis archivos fueron generados con el mismo AOI, periodo, escala estadística y método de deduplicación. Cada sistema conserva su propio criterio de control de calidad, documentado en `mask_definition`.
+Los seis CSV fueron generados con el mismo AOI, periodo, escala estadística y método de deduplicación. Cada sistema conserva su propio criterio de control de calidad, documentado en `mask_definition`.
 
 ## Definiciones esenciales
 
@@ -55,10 +65,6 @@ La versión 2.2 evita el sobreconteo producido cuando varios gránulos o escenas
 Por tanto, `valid_obs_*` representa **fechas calendario únicas válidas por píxel** y no el número bruto de escenas válidas.
 
 ## Escala y área de estudio
-
-El AOI utilizado por el script es:
-
-`users/juliangarzonb/limite_quindio`
 
 Las estadísticas espaciales se calculan a **250 m** en **EPSG:32618**. Esta escala es exclusivamente estadística y no modifica la resolución nativa de los productos.
 
@@ -92,4 +98,4 @@ Los archivos se suministran como **evidencia para análisis**, no como conclusio
 
 ---
 
-**Estado:** auditoría Sentinel-2 y Landsat 8/9 v2.2 validada e incorporada.
+**Estado:** cartografía base y auditoría Sentinel-2/Landsat 8/9 v2.2 incorporadas y documentadas.
