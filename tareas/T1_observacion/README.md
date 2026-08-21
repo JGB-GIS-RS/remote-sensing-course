@@ -24,4 +24,4 @@ T1 se concentra en **observación y selección de estrategia**. No exige clasifi
 
 ## Casos
 
-- [`T1-CAF-001`](casos/T1-CAF-001/) — Diseño de una estrategia de observación remota para sistemas cafeteros del Quindío.
+- [`T1-CAF-001`](casos/T1-CAF-001/) — Diseño de una estrategia de observación remota para cultivos de café en el departamento del Quindío.
