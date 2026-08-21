@@ -50,11 +50,28 @@ El caso dispone de información base para que el análisis se concentre en la to
 
 Los datos suministrados constituyen **evidencia para ser interpretada**, no conclusiones del ejercicio.
 
+## Materiales del caso
+
+Los recursos necesarios para desarrollar T1-CAF-001 se encuentran organizados en el repositorio:
+
+- [Datos, cartografía y documentación de las salidas](datos/)
+- [Límite del departamento del Quindío](datos/limite_quindio.geojson)
+- [Diccionario de datos](datos/DICCIONARIO_DATOS.md)
+- [Script de auditoría de disponibilidad óptica](scripts/auditoria_disponibilidad_optica_gee.js)
+- [Documentación del script](scripts/README.md)
+- [Bibliografía de partida](referencias/)
+- [Rúbrica de TAREA 1](../../../../docs/rubricas/T1_rubrica.md)
+- [Guía para autores](../../../../docs/guia_general/guia_para_autores.md)
+- [Plantilla oficial de la Serie Técnica](../../../../template/Plantilla_Oficial_Serie_Tecnica_Teledeteccion_v1.0.docx)
+- [Ejemplo de Informe Técnico No. 02](../../../../examples/informe_tecnico_02/)
+
+El estudiante deberá consultar el **enunciado**, la **Guía para autores** y la **rúbrica** de manera conjunta: el enunciado define el problema y las evidencias específicas; la guía establece las normas editoriales comunes; y la rúbrica establece los criterios de evaluación.
+
 ## Decisiones técnicas que debe resolver el informe
 
 ### 1. ¿Qué necesita ser observado?
 
-Antes de seleccionar un sensor, el equipo deberá establecer qué propiedades del sistema cafetero son relevantes para una estrategia de caracterización y seguimiento, diferenciando entre:
+Antes de seleccionar un sensor, el equipo deberá establecer qué propiedades del **cultivo de café** son relevantes para una estrategia de caracterización y seguimiento, diferenciando entre:
 
 `fenómeno → variable o propiedad biofísica → respuesta observable por el sensor`
 
@@ -116,7 +133,7 @@ Al menos una figura elaborada por el equipo que permita analizar el comportamien
 
 ### E3. Evidencia de adecuación espacial
 
-Representación o análisis que permita sustentar la relación entre resolución espacial y escala del sistema cafetero.
+Representación o análisis que permita sustentar la relación entre resolución espacial y escala de los **cultivos de café** considerados en el problema.
 
 ### E4. Evidencia temporal
 
