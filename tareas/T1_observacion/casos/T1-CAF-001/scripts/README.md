@@ -65,6 +65,8 @@ Si cambia el AOI, el periodo, el criterio de máscara, la escala estadística o 
 
 La versión 2.2 evita construir mosaicos diarios y evita materializar una capa raster de todo el quinquenio, reduciendo el consumo de memoria sin cambiar la definición científica de la variable de interés.
 
+La implementación y las salidas v2.2 fueron verificadas para **Sentinel-2 y Landsat 8/9** mediante controles de consistencia interna de inventarios, periodos, percentiles, tasas y umbrales espaciales.
+
 ---
 
-**Estado:** método v2.2 validado con Sentinel-2; ejecución Landsat v2.2 pendiente de incorporación al repositorio.
+**Estado:** método v2.2 validado para Sentinel-2 y Landsat 8/9; resultados incorporados al repositorio.
