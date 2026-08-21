@@ -1,0 +1,49 @@
+name: Reconstruct official template v2
+
+on:
+  push:
+    paths:
+      - '.tmp_template_v2/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Reconstruct DOCX
+        run: |
+          cat .tmp_template_v2/part-*.b64 | base64 --decode > template/Plantilla_Oficial_Serie_Tecnica_Teledeteccion_v2.0.docx
+
+      - name: Validate package and checksum
+        run: |
+          python - <<'PY'
+          import hashlib, zipfile
+          from pathlib import Path
+          p = Path('template/Plantilla_Oficial_Serie_Tecnica_Teledeteccion_v2.0.docx')
+          assert p.stat().st_size == 47798, p.stat().st_size
+          digest = hashlib.sha256(p.read_bytes()).hexdigest()
+          assert digest == '0027ae61591ba294fdaee3fb6fdf44f8a824604516899f8390e3121c27313148', digest
+          with zipfile.ZipFile(p) as z:
+              assert z.testzip() is None
+              assert 'word/document.xml' in z.namelist()
+              assert 'word/styles.xml' in z.namelist()
+          print('Validated:', digest)
+          PY
+
+      - name: Remove transfer scaffolding
+        run: |
+          rm -rf .tmp_template_v2
+          rm .github/workflows/reconstruct-template-v2.yml
+
+      - name: Commit validated template
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'template: publish validated official v2.0'
+          git push
