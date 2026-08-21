@@ -1,2 +1,2 @@
-system:index,area_km2,end_year,raw_images,region,sensor,start_year,unique_dates,.geo
-0,1739.459902788661,2025,1684,Quindio,Sentinel-2,2021,479,"{""type"":""MultiPoint"",""coordinates"":[]}"
+region,sensor,script_version,method_id,data_source,aoi_asset,aoi_area_km2,start_date,end_date,start_year,end_year,raw_images,unique_dates,audit_scale_m,audit_crs,obs_definition,mask_definition,deduplication
+Quindio,Sentinel-2,2.2,distinct_calendar_dates_at_valid_pixels,COPERNICUS/S2_SR_HARMONIZED,users/juliangarzonb/limite_quindio,1940.543577447419,2021-01-01,2025-12-31,2021,2025,1595,390,250,EPSG:32618,unique_valid_calendar_dates_per_pixel,"SCL excluded=0,1,3,8,9,10,11,2,7; B4 footprint",pixelwise_count_distinct_calendar_date_code
