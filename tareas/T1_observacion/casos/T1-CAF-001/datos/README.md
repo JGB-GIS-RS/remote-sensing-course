@@ -28,11 +28,13 @@ PERIODS   = variación anual y semestral
 - `MONTHLY_Quindio_Sentinel2_2021_2025.csv`
 - `PERIODS_Quindio_Sentinel2_2021_2025.csv`
 
-Los tres archivos fueron generados con el mismo AOI, periodo, máscara, escala estadística y método de deduplicación.
+### Landsat 8/9 · v2.2 validada
 
-### Landsat 8/9
+- `INVENTORY_Quindio_Landsat.csv`
+- `MONTHLY_Quindio_Landsat_2021_2025.csv`
+- `PERIODS_Quindio_Landsat_2021_2025.csv`
 
-Los resultados Landsat de versiones exploratorias anteriores fueron retirados para evitar mezclar metodologías. Los archivos v2.2 se incorporarán después de ejecutar y auditar el mismo script con `SENSOR = 'Landsat'`.
+Los seis archivos fueron generados con el mismo AOI, periodo, escala estadística y método de deduplicación. Cada sistema conserva su propio criterio de control de calidad, documentado en `mask_definition`.
 
 ## Definiciones esenciales
 
@@ -50,7 +52,7 @@ La definición completa de cada columna se encuentra en [`DICCIONARIO_DATOS.md`]
 
 La versión 2.2 evita el sobreconteo producido cuando varios gránulos o escenas del mismo día cubren un mismo píxel. Cada píxel válido recibe un código de fecha y se cuentan códigos distintos mediante reducción temporal.
 
-Por tanto, `valid_obs_*` ya no representa una densidad aproximada de gránulos válidos, sino **fechas calendario únicas válidas por píxel**.
+Por tanto, `valid_obs_*` representa **fechas calendario únicas válidas por píxel** y no el número bruto de escenas válidas.
 
 ## Escala y área de estudio
 
@@ -90,4 +92,4 @@ Los archivos se suministran como **evidencia para análisis**, no como conclusio
 
 ---
 
-**Estado:** Sentinel-2 v2.2 validado e incorporado · Landsat v2.2 pendiente de ejecución y auditoría.
+**Estado:** auditoría Sentinel-2 y Landsat 8/9 v2.2 validada e incorporada.
