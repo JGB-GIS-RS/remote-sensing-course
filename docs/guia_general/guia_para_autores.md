@@ -19,9 +19,9 @@ Esta guía constituye la norma editorial común de la Serie. Para interpretar co
 - **Guía para autores:** establece las reglas editoriales y de comunicación científica comunes a toda la Serie.
 - **Enunciado de la TAREA o del caso:** define el problema técnico, los datos suministrados, la evidencia obligatoria, las restricciones y, cuando se indique expresamente, excepciones operativas como extensión o archivos de entrega.
 - **Rúbrica:** establece los criterios y ponderaciones con los que se evaluará el trabajo; no sustituye el enunciado ni crea por sí sola nuevos productos obligatorios.
-- **Plantilla oficial:** materializa la composición visual del informe —márgenes, estilos, jerarquías tipográficas, encabezados, numeración y disposición general— y debe conservarse.
+- **Informe técnico de referencia y base editable:** materializa la composición visual del informe —márgenes, estilos, jerarquías tipográficas, encabezados, numeración y disposición general— y proporciona la base de trabajo que debe conservarse en esos aspectos.
 
-Ante una diferencia aparente, una **excepción explícita del enunciado de la TAREA** prevalece para ese caso concreto. En ausencia de una excepción expresa se aplica esta guía. Para aspectos exclusivamente de maquetación prevalece la plantilla oficial.
+Ante una diferencia aparente, una **excepción explícita del enunciado de la TAREA** prevalece para ese caso concreto. En ausencia de una excepción expresa se aplica esta guía. Para aspectos exclusivamente de maquetación y estilos se utiliza como referencia el **Informe Técnico No. 02**, disponible como documento editable.
 
 ---
 
@@ -68,7 +68,7 @@ No existe una distribución obligatoria de páginas entre secciones. Cada aparta
 
 Los anexos **no forman parte ordinaria de la Serie** y no se utilizarán para eludir el límite de extensión. Solo se incluirán cuando el enunciado de la TAREA los solicite expresamente. Los scripts, datos derivados, archivos auxiliares y otros materiales reproducibles se entregarán por separado o mediante el repositorio/enlace definido para la TAREA.
 
-La plantilla oficial de la Serie deberá conservarse sin alterar arbitrariamente:
+Al utilizar el **Informe Técnico No. 02 como base editable**, deberán conservarse sin alterar arbitrariamente:
 
 - tamaño de página y márgenes;
 - tipografías y jerarquía de estilos;
@@ -117,16 +117,15 @@ La **Recomendación técnica forma parte de todos los informes de la Serie**. Su
 ### 5.1. Título
 
 El título debe describir el problema técnico estudiado y, cuando resulte útil, la variable, método o contexto principal. Debe evitar formulaciones genéricas como:
-
 - “TAREA 1 de Teledetección”;
 - “Análisis de imágenes satelitales”;
 - “Trabajo final”.
 
-El código de la TAREA o del caso se identifica en el documento según la plantilla, pero no sustituye un título científico informativo.
+El código de la TAREA o del caso se identifica en el documento según el formato del informe de referencia, pero no sustituye un título científico informativo.
 
 ### 5.2. Autores
 
-Los nombres y correos institucionales se presentarán según la plantilla. No se incorporarán títulos académicos dentro de la línea de autores.
+Los nombres y correos institucionales se presentarán según el formato del informe de referencia. No se incorporarán títulos académicos dentro de la línea de autores.
 
 ### 5.3. Palabras clave
 
@@ -237,7 +236,6 @@ No se aplicarán correcciones adicionales por ritual. Si un producto ya contiene
 ---
 
 ## 10. Resultados
-
 Los Resultados responden a:
 
 > **¿Qué se obtuvo?**
@@ -358,7 +356,6 @@ El pie debe ser autosuficiente e indicar, según corresponda:
 - fuente cuando proceda.
 
 ### 14.4. Calidad gráfica
-
 Las figuras deberán presentar:
 
 - tipografía legible a tamaño final;
@@ -380,7 +377,7 @@ Las figuras elaboradas por terceros deberán citarse y utilizarse únicamente cu
 
 Las tablas se numeran consecutivamente como **Tabla 1, Tabla 2, ...** y deben ser citadas antes de su aparición.
 
-El título de tabla se ubica según la plantilla y debe describir con precisión su contenido.
+El título de tabla se ubica según el formato del informe de referencia y debe describir con precisión su contenido.
 
 Las tablas deben:
 
@@ -478,7 +475,6 @@ La elección de la fuente debe corresponder al tipo de afirmación que se desea 
 Los catálogos de plataformas como Google Earth Engine pueden documentar una colección o su implementación, pero no sustituyen por sí solos la literatura científica necesaria para sustentar una interpretación física o biofísica.
 
 Blogs, tutoriales, videos, páginas comerciales y materiales sin trazabilidad pueden ser útiles durante el aprendizaje, pero no deben constituir el soporte principal de afirmaciones científicas o metodológicas relevantes.
-
 No se incluirán referencias que no hayan sido citadas en el texto.
 
 ---
@@ -618,7 +614,6 @@ Antes de enviar el informe, los autores deberán comprobar:
 - [ ] Figuras y tablas cumplen una función analítica.
 - [ ] Ejes, unidades, leyendas, fechas y fuentes son suficientes.
 - [ ] No se repiten innecesariamente en texto todos los valores de tablas o figuras.
-
 ### Interpretación
 - [ ] Resultados y Discusión están claramente diferenciados.
 - [ ] Las limitaciones e incertidumbres están identificadas.
