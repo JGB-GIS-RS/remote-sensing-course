@@ -42,8 +42,9 @@ Documentación del curso:
 - [Guía general](docs/guia_general/)
 - [Normas editoriales](docs/normas_editoriales/)
 - [Marco de rúbricas](docs/rubricas/)
-- [Plantilla de la Serie Técnica](template/)
-- [Ejemplo de Informe Técnico No. 02](examples/informe_tecnico_02/)
+- [Informe técnico de referencia y base editable](examples/informe_tecnico_02/)
+
+El **Informe Técnico No. 02** funciona simultáneamente como ejemplo editorial terminado y como base editable de trabajo. El estudiante conserva su configuración, estilos y arquitectura principal, pero debe sustituir completamente el contenido científico y adaptar las subsecciones al problema específico de cada TAREA.
 
 ## Primer caso disponible
 
@@ -66,7 +67,6 @@ remote-sensing-course/
 │   ├── guia_general/
 │   ├── normas_editoriales/
 │   └── rubricas/
-├── template/
 ├── tareas/
 │   ├── T1_observacion/
 │   ├── T2_cambio_biofisico/
