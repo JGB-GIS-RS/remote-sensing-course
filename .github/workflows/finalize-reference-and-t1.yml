@@ -1,10 +1,9 @@
-# one-off finalization trigger
 name: Finalize reference document and T1 editorial consistency
 
 on:
-  push:
-    paths:
-      - '.github/workflows/finalize-reference-and-t1.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,8 +12,10 @@ jobs:
   finalize:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Apply final editorial corrections
         shell: bash
@@ -92,6 +93,24 @@ jobs:
               raise RuntimeError('Checklist anchor not found in author guide')
           guide.write_text(g.replace(checklist_anchor, checklist_new), encoding='utf-8')
 
+          delivery = Path('tareas/T1_observacion/casos/T1-CAF-001/ENTREGA_2026-2.md')
+          d = delivery.read_text(encoding='utf-8')
+          d = d.replace('## Archivo principal', '## Archivos principales')
+          old_main = ('El producto evaluado será un archivo **Microsoft Word (`.docx`)** con una extensión máxima de **8 páginas completas**, incluyendo título, autores, Resumen, Palabras clave, figuras, tablas, Disponibilidad de datos y código y Referencias.')
+          new_main = ('La entrega incluirá **dos archivos del mismo informe final: PDF (`.pdf`) y Microsoft Word (`.docx`)**. El límite de **8 páginas completas** se verifica sobre el PDF, desde el título y los autores hasta la última página de Referencias. El DOCX deberá corresponder al mismo contenido y conservar la configuración editorial y los estilos de la Serie.')
+          if old_main not in d:
+              raise RuntimeError('Main delivery paragraph not found in semester sheet')
+          d = d.replace(old_main, new_main)
+          old_names = '''### Nombre del archivo\n\nPara dos autores:\n\n`T1-CAF-001_Apellido1-Apellido2.docx`\n\nPara un solo autor:\n\n`T1-CAF-001_Apellido.docx`\n\nSe recomienda utilizar únicamente letras sin tildes, números, guiones y guiones bajos en los nombres de archivo.'''
+          new_names = '''### Nombre de los archivos\n\nAmbas versiones utilizarán el mismo nombre base. Para dos autores:\n\n`T1-CAF-001_Apellido1-Apellido2.docx`  \n`T1-CAF-001_Apellido1-Apellido2.pdf`\n\nPara un solo autor:\n\n`T1-CAF-001_Apellido.docx`  \n`T1-CAF-001_Apellido.pdf`\n\nSe recomienda utilizar únicamente letras sin tildes, números, guiones y guiones bajos en los nombres de archivo.'''
+          if old_names not in d:
+              raise RuntimeError('Filename block not found in semester sheet')
+          d = d.replace(old_names, new_names)
+          d = d.replace('- [ ] El archivo entregado está en formato **`.docx`**.', '- [ ] Se entregaron **el PDF (`.pdf`) y el DOCX (`.docx`)**, con el mismo contenido final.')
+          d = d.replace('- [ ] El archivo `.docx` fue abierto y revisado después de su guardado final.', '- [ ] El PDF y el DOCX fueron abiertos y revisados después de su guardado final.')
+          d = d.replace('**Formato principal:** `.docx`', '**Formatos:** `.pdf` + `.docx`')
+          delivery.write_text(d, encoding='utf-8')
+
           for path in [Path('template'), Path('.tmp_template_v2'), Path('.geojson_parts')]:
               if path.exists():
                   shutil.rmtree(path)
@@ -119,7 +138,7 @@ jobs:
               assert 'un flujo basado en análisis de imágenes basado en objetos' not in xml
           PY
 
-      - name: Commit finalization
+      - name: Commit finalization to main
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
@@ -129,5 +148,5 @@ jobs:
             echo 'No changes to commit.'
           else
             git commit -m 'docs: finalize editable reference and delivery consistency'
-            git push
+            git push origin main
           fi
