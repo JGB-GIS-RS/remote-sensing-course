@@ -25,11 +25,12 @@ jobs:
           import zipfile
           import shutil
 
+          # 1) Informe Técnico No. 02: incorporar la corrección del Resumen.
           docx = Path('examples/informe_tecnico_02/Informe_Tecnico_02_Referencia.docx')
           tmp = docx.with_suffix('.tmp.docx')
           old = 'un flujo basado en análisis de imágenes basado en objetos'
           new = 'un flujo de análisis de imágenes basado en objetos'
-          with zipfile.ZipFile(docx, 'r') as zin, zipfile.ZipFile(tmp, 'w') as zout:
+          with zipfile.ZipFile(docx, 'r') as zin, zipfile.ZipFile(tmp, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zout:
               changed = 0
               for info in zin.infolist():
                   data = zin.read(info.filename)
@@ -46,14 +47,16 @@ jobs:
               raise RuntimeError(f'Expected exactly 1 summary replacement, found {changed}')
           tmp.replace(docx)
 
+          # 2) Script GEE: eliminar el residuo terminológico.
           script = Path('tareas/T1_observacion/casos/T1-CAF-001/scripts/auditoria_disponibilidad_optica_gee.js')
           s = script.read_text(encoding='utf-8')
           old_s = 'observación remota para sistemas cafeteros del Quindío.'
           new_s = 'observación remota para cultivos de café en el departamento del Quindío.'
           if old_s not in s:
-              raise RuntimeError('Residual terminology was not found in GEE script')
+              raise RuntimeError('Expected terminology residue was not found in GEE script')
           script.write_text(s.replace(old_s, new_s), encoding='utf-8')
 
+          # 3) README del informe de referencia: nota de autoría y política PDF + DOCX.
           readme = Path('examples/informe_tecnico_02/README.md')
           r = readme.read_text(encoding='utf-8')
           anchor = ('Su contenido científico corresponde exclusivamente a ese estudio. '
@@ -64,6 +67,7 @@ jobs:
               if anchor not in r:
                   raise RuntimeError('Authorship-note anchor not found in reference README')
               r = r.replace(anchor, anchor + note)
+
           old_delivery = ('El **archivo principal de entrega del informe será `.docx`**, salvo que el enunciado de una TAREA establezca expresamente otra condición. '
                           'Esta decisión permite conservar los estilos, revisar directamente el documento y realizar observaciones editoriales sobre el archivo de trabajo.')
           new_delivery = ('Salvo indicación expresa de una TAREA, la entrega incluirá **dos versiones del mismo informe: `.pdf` y `.docx`**. '
@@ -72,12 +76,14 @@ jobs:
           if old_delivery not in r:
               raise RuntimeError('Delivery paragraph not found in reference README')
           r = r.replace(old_delivery, new_delivery)
+
           old_end = ('El **producto principal se entrega en formato `.docx`**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.')
           new_end = ('La entrega ordinaria incluye **el PDF final y el DOCX editable del mismo informe**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.')
           if old_end not in r:
               raise RuntimeError('Final delivery sentence not found in reference README')
           readme.write_text(r.replace(old_end, new_end), encoding='utf-8')
 
+          # 4) Guía para autores: hacer PDF + DOCX una regla coherente.
           guide = Path('docs/guia_general/guia_para_autores.md')
           g = guide.read_text(encoding='utf-8')
           old_files = '''El paquete incluirá, cuando correspondan al trabajo realizado:\n\n1. informe final en **PDF**;\n2. documento fuente editable, cuando sea solicitado;\n3. scripts/notebooks utilizados para producir evidencias o resultados;\n4. datos derivados necesarios para reproducir el análisis y que no puedan recuperarse directamente desde una fuente oficial;\n5. archivo `README` o nota equivalente cuando sea necesario explicar la estructura, dependencias o ejecución del material reproducible.\n'''
@@ -85,6 +91,7 @@ jobs:
           if old_files not in g:
               raise RuntimeError('Section 22 delivery block not found in author guide')
           g = g.replace(old_files, new_files)
+
           checklist_anchor = '### Formato y estructura\n- [ ] El PDF completo no supera el límite de páginas establecido.'
           checklist_new = ('### Formato y estructura\n'
                            '- [ ] Se entregaron el **PDF final y el DOCX editable**, y ambos corresponden al mismo contenido.\n'
@@ -93,6 +100,7 @@ jobs:
               raise RuntimeError('Checklist anchor not found in author guide')
           guide.write_text(g.replace(checklist_anchor, checklist_new), encoding='utf-8')
 
+          # 5) Hoja de entrega T1: armonizar con la Guía.
           delivery = Path('tareas/T1_observacion/casos/T1-CAF-001/ENTREGA_2026-2.md')
           d = delivery.read_text(encoding='utf-8')
           d = d.replace('## Archivo principal', '## Archivos principales')
@@ -101,6 +109,7 @@ jobs:
           if old_main not in d:
               raise RuntimeError('Main delivery paragraph not found in semester sheet')
           d = d.replace(old_main, new_main)
+
           old_names = '''### Nombre del archivo\n\nPara dos autores:\n\n`T1-CAF-001_Apellido1-Apellido2.docx`\n\nPara un solo autor:\n\n`T1-CAF-001_Apellido.docx`\n\nSe recomienda utilizar únicamente letras sin tildes, números, guiones y guiones bajos en los nombres de archivo.'''
           new_names = '''### Nombre de los archivos\n\nAmbas versiones utilizarán el mismo nombre base. Para dos autores:\n\n`T1-CAF-001_Apellido1-Apellido2.docx`  \n`T1-CAF-001_Apellido1-Apellido2.pdf`\n\nPara un solo autor:\n\n`T1-CAF-001_Apellido.docx`  \n`T1-CAF-001_Apellido.pdf`\n\nSe recomienda utilizar únicamente letras sin tildes, números, guiones y guiones bajos en los nombres de archivo.'''
           if old_names not in d:
@@ -111,16 +120,24 @@ jobs:
           d = d.replace('**Formato principal:** `.docx`', '**Formatos:** `.pdf` + `.docx`')
           delivery.write_text(d, encoding='utf-8')
 
+          # 6) Retirar el estándar duplicado y residuos temporales.
           for path in [Path('template'), Path('.tmp_template_v2'), Path('.geojson_parts')]:
               if path.exists():
                   shutil.rmtree(path)
 
-          repo_text = ''
+          # Verificación textual: excluir .github porque este workflow contiene
+          # deliberadamente la cadena antigua necesaria para hacer el reemplazo.
+          phrase = 'sistemas ' + 'cafeteros'
+          offenders = []
           for p in Path('.').rglob('*'):
-              if p.is_file() and '.git' not in p.parts and p.suffix.lower() in {'.md', '.js', '.py', '.txt', '.yml', '.yaml'}:
-                  repo_text += p.read_text(encoding='utf-8', errors='ignore') + '\n'
-          if 'sistemas cafeteros' in repo_text.lower():
-              raise RuntimeError('Residual phrase "sistemas cafeteros" remains in text/code files')
+              if not p.is_file() or '.git' in p.parts or '.github' in p.parts:
+                  continue
+              if p.suffix.lower() not in {'.md', '.js', '.py', '.txt', '.yml', '.yaml'}:
+                  continue
+              if phrase in p.read_text(encoding='utf-8', errors='ignore').lower():
+                  offenders.append(str(p))
+          if offenders:
+              raise RuntimeError('Residual terminology remains in: ' + ', '.join(offenders))
           PY
 
       - name: Validate DOCX package
