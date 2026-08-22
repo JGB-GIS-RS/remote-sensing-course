@@ -5,6 +5,7 @@ Esta guía documenta la arquitectura académica del curso y la lógica de la **S
 ## Documentos de referencia
 
 - [`Guía para autores · Serie Técnica de Teledetección`](guia_para_autores.md) — **versión 1.0 · norma editorial oficial**.
+- [`Informe técnico de referencia y base editable`](../../examples/informe_tecnico_02/) — ejemplo terminado y documento Word de trabajo para los informes de la Serie.
 - [`Normas editoriales`](../normas_editoriales/README.md).
 - [`Rúbricas`](../rubricas/README.md).
 
@@ -53,6 +54,8 @@ No se exige reprocesar por ritual un producto que ya incorpora las correcciones 
 Cada TAREA culmina en un Informe Técnico de la Serie. La estructura editorial principal es común; las subsecciones se adaptan al problema.
 
 Los informes deben separar con claridad **Resultados**, **Discusión**, **Recomendación técnica** y **Conclusiones**, documentar la reproducibilidad y declarar alcance, limitaciones e incertidumbre.
+
+El estudiante utiliza el **Informe Técnico No. 02** como base editable para conservar la configuración editorial y los estilos. Su contenido científico y sus subsecciones particulares deben sustituirse o adaptarse según el problema de cada TAREA.
 
 ## Banco de casos
 
