@@ -19,6 +19,8 @@ El archivo de trabajo de la Serie es:
 
 El estudiante debe descargar una copia y utilizar **Guardar como** antes de iniciar su informe. El propósito es conservar la configuración editorial y los estilos del documento, no reutilizar su contenido científico.
 
+El **archivo principal de entrega del informe será `.docx`**, salvo que el enunciado de una TAREA establezca expresamente otra condición. Esta decisión permite conservar los estilos, revisar directamente el documento y realizar observaciones editoriales sobre el archivo de trabajo.
+
 ## Cómo utilizar el documento
 
 Al preparar un nuevo Informe Técnico:
@@ -117,7 +119,9 @@ Documenta la procedencia de datos suministrados y externos, productos derivados,
 
 ### Referencias
 
-Incluye únicamente las fuentes citadas en el informe y utiliza un formato bibliográfico consistente. Para afirmaciones científicas deben priorizarse fuentes primarias y literatura arbitrada; para especificaciones de productos, misiones o procesamiento deben utilizarse preferentemente fuentes oficiales.
+Incluye únicamente las fuentes citadas en el informe. **Las referencias y las citas en el texto deben presentarse en formato IEEE**, utilizando la variante IEEE compacta definida en la **Guía para autores**: numeración según el orden de primera aparición, citas entre corchetes —por ejemplo `[1]`, `[2]`, `[4–6]`— y referencias bibliográficas consistentes, con DOI cuando exista.
+
+Para afirmaciones científicas deben priorizarse fuentes primarias y literatura arbitrada; para especificaciones de productos, misiones o procesamiento deben utilizarse preferentemente fuentes oficiales.
 
 ## Figuras, tablas y ecuaciones
 
@@ -136,9 +140,11 @@ Los documentos cumplen funciones distintas y complementarias:
 
 En caso de una condición específica de una TAREA, prevalece lo indicado en su enunciado y en la rúbrica correspondiente.
 
-## Extensión
+## Extensión y entrega
 
 Como norma general, el informe completo tiene un máximo de **8 páginas**, incluyendo título, autores, figuras, tablas, Disponibilidad de datos y código y Referencias, salvo que el enunciado establezca explícitamente otra condición.
+
+El **producto principal se entrega en formato `.docx`**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.
 
 No deben modificarse arbitrariamente márgenes, tipografías, interlineados, encabezados, numeración de líneas u otros elementos editoriales para ganar espacio.
 
