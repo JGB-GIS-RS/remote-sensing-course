@@ -21,8 +21,6 @@ El archivo de trabajo de la Serie es:
 
 El estudiante debe descargar una copia y utilizar **Guardar como** antes de iniciar su informe. El propósito es conservar la configuración editorial y los estilos del documento, no reutilizar su contenido científico.
 
-Salvo indicación expresa de una TAREA, la entrega incluirá **dos versiones del mismo informe: `.pdf` y `.docx`**. El PDF fija la composición visual y es la referencia para comprobar el límite de páginas; el DOCX conserva los estilos y permite la revisión editorial del archivo de trabajo. Ambas versiones deben corresponder al mismo contenido final.
-
 ## Cómo utilizar el documento
 
 Al preparar un nuevo Informe Técnico:
