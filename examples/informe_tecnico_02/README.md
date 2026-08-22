@@ -71,7 +71,7 @@ Los informes conservan la siguiente estructura general:
 
 ### Resumen
 
-Síntesis autosuficiente del problema u objetivo, datos y enfoque metodológico esenciales, resultados principales y conclusión o decisión técnica. Como referencia editorial, se recomienda una extensión aproximada de **150–200 palabras**, salvo indicación diferente en el enunciado.
+Síntesis autosuficiente del problema u objetivo, datos y enfoque metodológico esenciales, resultados principales y conclusión o decisión técnica. Como referencia editorial, se recomienda no exeder **200 palabras**.
 
 ### Palabras clave
 
