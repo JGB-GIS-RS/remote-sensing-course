@@ -58,6 +58,7 @@ El caso evalúa la pertinencia de diferentes sistemas de teledetección pasiva m
 - [Datos y cartografía](tareas/T1_observacion/casos/T1-CAF-001/datos/)
 - [Script reproducible de auditoría en GEE](tareas/T1_observacion/casos/T1-CAF-001/scripts/auditoria_disponibilidad_optica_gee.js)
 - [Referencias del caso](tareas/T1_observacion/casos/T1-CAF-001/referencias/)
+- [Condiciones de entrega · 2026-2](tareas/T1_observacion/casos/T1-CAF-001/ENTREGA_2026-2.md)
 
 ## Organización del repositorio
 
