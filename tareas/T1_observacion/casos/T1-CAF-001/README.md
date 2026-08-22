@@ -63,8 +63,11 @@ Los recursos necesarios para desarrollar T1-CAF-001 se encuentran organizados en
 - [Rúbrica de TAREA 1](../../../../docs/rubricas/T1_rubrica.md)
 - [Guía para autores](../../../../docs/guia_general/guia_para_autores.md)
 - [Informe técnico de referencia y base editable](../../../../examples/informe_tecnico_02/)
+- [Condiciones de entrega · semestre 2026-2](ENTREGA_2026-2.md)
 
-El estudiante deberá consultar conjuntamente el **enunciado**, la **Guía para autores**, la **rúbrica** y el **Informe técnico de referencia y base editable**: el enunciado define el problema y las evidencias específicas; la guía establece las normas científicas y editoriales comunes; la rúbrica establece los criterios de evaluación; y el informe de referencia muestra la materialización del formato y proporciona los estilos de trabajo. Su contenido científico y sus subsecciones específicas no deben copiarse al caso T1-CAF-001.
+> **Entrega 2026-2:** 15 de septiembre de 2026 mediante **Moodle / Plataforma UQ**. Consulte las condiciones operativas completas en [`ENTREGA_2026-2.md`](ENTREGA_2026-2.md).
+
+El estudiante deberá consultar conjuntamente el **enunciado**, la **Guía para autores**, la **rúbrica**, el **Informe técnico de referencia y base editable** y las **condiciones de entrega**: el enunciado define el problema y las evidencias específicas; la guía establece las normas científicas y editoriales comunes; la rúbrica establece los criterios de evaluación; el informe de referencia muestra la materialización del formato y proporciona los estilos de trabajo; y la hoja de entrega establece las condiciones operativas del semestre. El contenido científico y las subsecciones específicas del Informe Técnico No. 02 no deben copiarse al caso T1-CAF-001.
 
 ## Decisiones técnicas que debe resolver el informe
 
@@ -261,6 +264,8 @@ T1 **no exige** cálculo sistemático de índices, generación de composiciones 
 - Toda afirmación técnica relevante deberá sustentarse en datos, fundamentos físicos o literatura científica.
 - La recomendación deberá derivarse de la evidencia presentada.
 - Las limitaciones e incertidumbres deberán declararse explícitamente.
+
+Las condiciones operativas de entrega para el semestre **2026-2** se encuentran en [`ENTREGA_2026-2.md`](ENTREGA_2026-2.md).
 
 ## Criterio de éxito
 
