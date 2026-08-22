@@ -13,7 +13,7 @@
  *   3. número de fechas únicas con observación válida por píxel.
  *
  * El script forma parte del caso T1-CAF-001: Diseño de una estrategia de
- * observación remota para sistemas cafeteros del Quindío. Su finalidad es
+ * observación remota para cultivos de café en el departamento del Quindío. Su finalidad es
  * caracterizar la disponibilidad real del archivo óptico; no determina por sí
  * solo la idoneidad espectral, espacial o biofísica de una misión.
  *

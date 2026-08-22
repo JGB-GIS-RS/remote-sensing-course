@@ -10,21 +10,23 @@
 
 La hora exacta de cierre será la configurada en la actividad correspondiente de Moodle / Plataforma UQ.
 
-## Archivo principal
+## Archivos principales
 
-El producto evaluado será un archivo **Microsoft Word (`.docx`)** con una extensión máxima de **8 páginas completas**, incluyendo título, autores, Resumen, Palabras clave, figuras, tablas, Disponibilidad de datos y código y Referencias.
+La entrega incluirá **dos archivos del mismo informe final: PDF (`.pdf`) y Microsoft Word (`.docx`)**. El límite de **8 páginas completas** se verifica sobre el PDF, desde el título y los autores hasta la última página de Referencias. El DOCX deberá corresponder al mismo contenido y conservar la configuración editorial y los estilos de la Serie.
 
 El informe deberá prepararse utilizando como base editable el [`Informe_Tecnico_02_Referencia.docx`](../../../../examples/informe_tecnico_02/Informe_Tecnico_02_Referencia.docx). Deben conservarse su configuración editorial y estilos, pero sustituirse completamente el contenido científico del ejemplo y adaptarse las subsecciones al problema de T1-CAF-001.
 
-### Nombre del archivo
+### Nombre de los archivos
 
-Para dos autores:
+Ambas versiones utilizarán el mismo nombre base. Para dos autores:
 
-`T1-CAF-001_Apellido1-Apellido2.docx`
+`T1-CAF-001_Apellido1-Apellido2.docx`  
+`T1-CAF-001_Apellido1-Apellido2.pdf`
 
 Para un solo autor:
 
-`T1-CAF-001_Apellido.docx`
+`T1-CAF-001_Apellido.docx`  
+`T1-CAF-001_Apellido.pdf`
 
 Se recomienda utilizar únicamente letras sin tildes, números, guiones y guiones bajos en los nombres de archivo.
 
@@ -48,7 +50,7 @@ El enunciado define el problema y las evidencias obligatorias; la Guía para aut
 
 ## Lista de verificación antes de enviar
 
-- [ ] El archivo entregado está en formato **`.docx`**.
+- [ ] Se entregaron **el PDF (`.pdf`) y el DOCX (`.docx`)**, con el mismo contenido final.
 - [ ] El informe tiene **8 páginas o menos**.
 - [ ] El informe tiene máximo **dos autores**.
 - [ ] El archivo está nombrado según la convención indicada.
@@ -60,8 +62,8 @@ El enunciado define el problema y las evidencias obligatorias; la Guía para aut
 - [ ] Las limitaciones e incertidumbres están declaradas explícitamente.
 - [ ] Las fuentes, datos y procedimientos son trazables.
 - [ ] Los archivos reproducibles complementarios, cuando correspondan, están adjuntos en Moodle / Plataforma UQ.
-- [ ] El archivo `.docx` fue abierto y revisado después de su guardado final.
+- [ ] El PDF y el DOCX fueron abiertos y revisados después de su guardado final.
 
 ---
 
-**Semestre:** 2026-2 · **Entrega:** Moodle / Plataforma UQ · **Formato principal:** `.docx` · **Fecha límite:** 15 de septiembre de 2026.
+**Semestre:** 2026-2 · **Entrega:** Moodle / Plataforma UQ · **Formatos:** `.pdf` + `.docx` · **Fecha límite:** 15 de septiembre de 2026.

@@ -580,10 +580,12 @@ Salvo indicación diferente en la TAREA, el paquete de entrega deberá permitir 
 El paquete incluirá, cuando correspondan al trabajo realizado:
 
 1. informe final en **PDF**;
-2. documento fuente editable, cuando sea solicitado;
+2. documento fuente editable en **Microsoft Word (`.docx`)**;
 3. scripts/notebooks utilizados para producir evidencias o resultados;
 4. datos derivados necesarios para reproducir el análisis y que no puedan recuperarse directamente desde una fuente oficial;
 5. archivo `README` o nota equivalente cuando sea necesario explicar la estructura, dependencias o ejecución del material reproducible.
+
+El **PDF y el DOCX constituyen dos representaciones del mismo informe final**. El PDF fija la composición visual y es la referencia para verificar el límite de páginas; el DOCX conserva los estilos y permite la revisión editorial y técnica del documento fuente. Ambos archivos deben corresponder al mismo contenido.
 
 La ausencia de código es válida cuando el procedimiento no lo requiera; en ese caso el informe deberá documentar suficientemente los parámetros y operaciones relevantes.
 
@@ -596,6 +598,7 @@ El canal de entrega y la convención definitiva de nombres serán establecidos p
 Antes de enviar el informe, los autores deberán comprobar:
 
 ### Formato y estructura
+- [ ] Se entregaron el **PDF final y el DOCX editable**, y ambos corresponden al mismo contenido.
 - [ ] El PDF completo no supera el límite de páginas establecido.
 - [ ] Resumen y Palabras clave no están numerados.
 - [ ] Las secciones 1–7 conservan los grandes encabezados de la Serie.

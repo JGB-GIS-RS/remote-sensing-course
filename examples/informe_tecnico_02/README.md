@@ -11,6 +11,8 @@ El documento de referencia desarrolla el caso:
 
 Su contenido científico corresponde exclusivamente a ese estudio. **No constituye una solución para otros casos ni una metodología que deba copiarse de manera automática.**
 
+> **Nota sobre autoría:** el Informe Técnico No. 02 conserva los autores del estudio de referencia. Esta composición no modifica la regla académica de la Serie: los informes estudiantiles tendrán un máximo de dos autores.
+
 ## Archivo editable
 
 El archivo de trabajo de la Serie es:
@@ -19,7 +21,7 @@ El archivo de trabajo de la Serie es:
 
 El estudiante debe descargar una copia y utilizar **Guardar como** antes de iniciar su informe. El propósito es conservar la configuración editorial y los estilos del documento, no reutilizar su contenido científico.
 
-El **archivo principal de entrega del informe será `.docx`**, salvo que el enunciado de una TAREA establezca expresamente otra condición. Esta decisión permite conservar los estilos, revisar directamente el documento y realizar observaciones editoriales sobre el archivo de trabajo.
+Salvo indicación expresa de una TAREA, la entrega incluirá **dos versiones del mismo informe: `.pdf` y `.docx`**. El PDF fija la composición visual y es la referencia para comprobar el límite de páginas; el DOCX conserva los estilos y permite la revisión editorial del archivo de trabajo. Ambas versiones deben corresponder al mismo contenido final.
 
 ## Cómo utilizar el documento
 
@@ -144,7 +146,7 @@ En caso de una condición específica de una TAREA, prevalece lo indicado en su 
 
 Como norma general, el informe completo tiene un máximo de **8 páginas**, incluyendo título, autores, figuras, tablas, Disponibilidad de datos y código y Referencias, salvo que el enunciado establezca explícitamente otra condición.
 
-El **producto principal se entrega en formato `.docx`**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.
+La entrega ordinaria incluye **el PDF final y el DOCX editable del mismo informe**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.
 
 No deben modificarse arbitrariamente márgenes, tipografías, interlineados, encabezados, numeración de líneas u otros elementos editoriales para ganar espacio.
 

@@ -192,4 +192,4 @@ Cada criterio se califica en escala de 0 a 5.
 - La selección de software no constituye criterio de mérito.
 - Se evaluará la coherencia entre evidencia y decisión, no la coincidencia con una respuesta predeterminada.
 
-**Caso piloto de referencia:** `T1-CAF-001` · Sistemas cafeteros del Quindío.
+**Caso piloto de referencia:** `T1-CAF-001` · Cultivos de café del Quindío.
