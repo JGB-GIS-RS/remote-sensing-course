@@ -281,4 +281,4 @@ Un informe técnicamente sólido podrá concluir que una misión es suficiente, 
 
 ---
 
-**Versión del caso:** 1.0 · **Estado:** piloto desarrollado, pendiente de aplicación estudiantil.
+**Versión del caso:** 1.0 · **Estado:** listo para piloto estudiantil · semestre 2026-2.
