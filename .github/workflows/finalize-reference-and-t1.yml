@@ -1,0 +1,161 @@
+name: Finalize reference document and T1 editorial consistency
+
+on:
+  push:
+    paths:
+      - '.github/workflows/finalize-reference-and-t1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Apply final editorial corrections
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          import shutil
+
+          # -----------------------------------------------------------------
+          # 1. Informe Técnico No. 02: corrección puntual del Resumen.
+          # -----------------------------------------------------------------
+          docx = Path('examples/informe_tecnico_02/Informe_Tecnico_02_Referencia.docx')
+          tmp = docx.with_suffix('.tmp.docx')
+          old = 'un flujo basado en análisis de imágenes basado en objetos'
+          new = 'un flujo de análisis de imágenes basado en objetos'
+
+          with zipfile.ZipFile(docx, 'r') as zin, zipfile.ZipFile(tmp, 'w') as zout:
+              changed = 0
+              for info in zin.infolist():
+                  data = zin.read(info.filename)
+                  if info.filename == 'word/document.xml':
+                      text = data.decode('utf-8')
+                      n = text.count(old)
+                      if n:
+                          text = text.replace(old, new)
+                          changed += n
+                      data = text.encode('utf-8')
+                  zout.writestr(info, data)
+
+          if changed != 1:
+              tmp.unlink(missing_ok=True)
+              raise RuntimeError(f'Expected exactly 1 summary replacement, found {changed}')
+          tmp.replace(docx)
+
+          # -----------------------------------------------------------------
+          # 2. Script GEE: cultivos de café, no "sistemas cafeteros".
+          # -----------------------------------------------------------------
+          script = Path('tareas/T1_observacion/casos/T1-CAF-001/scripts/auditoria_disponibilidad_optica_gee.js')
+          s = script.read_text(encoding='utf-8')
+          old_s = 'observación remota para sistemas cafeteros del Quindío.'
+          new_s = 'observación remota para cultivos de café en el departamento del Quindío.'
+          if old_s not in s:
+              raise RuntimeError('Residual terminology was not found in GEE script')
+          s = s.replace(old_s, new_s)
+          script.write_text(s, encoding='utf-8')
+
+          # -----------------------------------------------------------------
+          # 3. README del ejemplo: nota de autoría + entrega PDF y DOCX.
+          # -----------------------------------------------------------------
+          readme = Path('examples/informe_tecnico_02/README.md')
+          r = readme.read_text(encoding='utf-8')
+
+          anchor = ('Su contenido científico corresponde exclusivamente a ese estudio. '
+                    '**No constituye una solución para otros casos ni una metodología que deba copiarse de manera automática.**')
+          note = ('\n\n> **Nota sobre autoría:** el Informe Técnico No. 02 conserva los autores del estudio de referencia. '
+                  'Esta composición no modifica la regla académica de la Serie: los informes estudiantiles tendrán un máximo de dos autores.')
+          if note.strip() not in r:
+              if anchor not in r:
+                  raise RuntimeError('Authorship-note anchor not found in reference README')
+              r = r.replace(anchor, anchor + note)
+
+          old_delivery = ('El **archivo principal de entrega del informe será `.docx`**, salvo que el enunciado de una TAREA establezca expresamente otra condición. '
+                          'Esta decisión permite conservar los estilos, revisar directamente el documento y realizar observaciones editoriales sobre el archivo de trabajo.')
+          new_delivery = ('Salvo indicación expresa de una TAREA, la entrega incluirá **dos versiones del mismo informe: `.pdf` y `.docx`**. '
+                          'El PDF fija la composición visual y es la referencia para comprobar el límite de páginas; el DOCX conserva los estilos y permite la revisión editorial del archivo de trabajo. '
+                          'Ambas versiones deben corresponder al mismo contenido final.')
+          if old_delivery not in r:
+              raise RuntimeError('Delivery paragraph not found in reference README')
+          r = r.replace(old_delivery, new_delivery)
+
+          old_end = ('El **producto principal se entrega en formato `.docx`**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.')
+          new_end = ('La entrega ordinaria incluye **el PDF final y el DOCX editable del mismo informe**. Los archivos reproducibles complementarios se entregarán según lo indicado en el enunciado o en la hoja de entrega de la TAREA.')
+          if old_end not in r:
+              raise RuntimeError('Final delivery sentence not found in reference README')
+          r = r.replace(old_end, new_end)
+          readme.write_text(r, encoding='utf-8')
+
+          # -----------------------------------------------------------------
+          # 4. Guía para autores: PDF + DOCX como entrega ordinaria.
+          # -----------------------------------------------------------------
+          guide = Path('docs/guia_general/guia_para_autores.md')
+          g = guide.read_text(encoding='utf-8')
+
+          old_files = '''El paquete incluirá, cuando correspondan al trabajo realizado:\n\n1. informe final en **PDF**;\n2. documento fuente editable, cuando sea solicitado;\n3. scripts/notebooks utilizados para producir evidencias o resultados;\n4. datos derivados necesarios para reproducir el análisis y que no puedan recuperarse directamente desde una fuente oficial;\n5. archivo `README` o nota equivalente cuando sea necesario explicar la estructura, dependencias o ejecución del material reproducible.\n'''
+          new_files = '''El paquete incluirá, cuando correspondan al trabajo realizado:\n\n1. informe final en **PDF**;\n2. documento fuente editable en **Microsoft Word (`.docx`)**;\n3. scripts/notebooks utilizados para producir evidencias o resultados;\n4. datos derivados necesarios para reproducir el análisis y que no puedan recuperarse directamente desde una fuente oficial;\n5. archivo `README` o nota equivalente cuando sea necesario explicar la estructura, dependencias o ejecución del material reproducible.\n\nEl **PDF y el DOCX constituyen dos representaciones del mismo informe final**. El PDF fija la composición visual y es la referencia para verificar el límite de páginas; el DOCX conserva los estilos y permite la revisión editorial y técnica del documento fuente. Ambos archivos deben corresponder al mismo contenido.\n'''
+          if old_files not in g:
+              raise RuntimeError('Section 22 delivery block not found in author guide')
+          g = g.replace(old_files, new_files)
+
+          checklist_anchor = '### Formato y estructura\n- [ ] El PDF completo no supera el límite de páginas establecido.'
+          checklist_new = ('### Formato y estructura\n'
+                           '- [ ] Se entregaron el **PDF final y el DOCX editable**, y ambos corresponden al mismo contenido.\n'
+                           '- [ ] El PDF completo no supera el límite de páginas establecido.')
+          if checklist_anchor not in g:
+              raise RuntimeError('Checklist anchor not found in author guide')
+          g = g.replace(checklist_anchor, checklist_new)
+          guide.write_text(g, encoding='utf-8')
+
+          # -----------------------------------------------------------------
+          # 5. Eliminar recursos redundantes/temporales.
+          # -----------------------------------------------------------------
+          for path in [Path('template'), Path('.tmp_template_v2'), Path('.geojson_parts')]:
+              if path.exists():
+                  shutil.rmtree(path)
+
+          # Verificación textual final.
+          repo_text = ''
+          for p in Path('.').rglob('*'):
+              if p.is_file() and '.git' not in p.parts and p.suffix.lower() in {'.md', '.js', '.py', '.txt', '.yml', '.yaml'}:
+                  try:
+                      repo_text += p.read_text(encoding='utf-8', errors='ignore') + '\n'
+                  except Exception:
+                      pass
+          if 'sistemas cafeteros' in repo_text.lower():
+              raise RuntimeError('Residual phrase "sistemas cafeteros" remains in text/code files')
+          PY
+
+      - name: Validate DOCX package
+        shell: bash
+        run: |
+          python - <<'PY'
+          import zipfile
+          from pathlib import Path
+          p = Path('examples/informe_tecnico_02/Informe_Tecnico_02_Referencia.docx')
+          assert p.exists() and p.stat().st_size > 1_000_000
+          with zipfile.ZipFile(p) as z:
+              assert z.testzip() is None
+              xml = z.read('word/document.xml').decode('utf-8')
+              assert 'un flujo de análisis de imágenes basado en objetos' in xml
+              assert 'un flujo basado en análisis de imágenes basado en objetos' not in xml
+          PY
+
+      - name: Commit finalization
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+          else
+            git commit -m 'docs: finalize editable reference and delivery consistency'
+            git push
+          fi
