@@ -62,10 +62,9 @@ Los recursos necesarios para desarrollar T1-CAF-001 se encuentran organizados en
 - [Bibliografía de partida](referencias/)
 - [Rúbrica de TAREA 1](../../../../docs/rubricas/T1_rubrica.md)
 - [Guía para autores](../../../../docs/guia_general/guia_para_autores.md)
-- [Plantilla oficial de la Serie Técnica](../../../../template/Plantilla_Oficial_Serie_Tecnica_Teledeteccion_v1.0.docx)
-- [Ejemplo de Informe Técnico No. 02](../../../../examples/informe_tecnico_02/)
+- [Informe técnico de referencia y base editable](../../../../examples/informe_tecnico_02/)
 
-El estudiante deberá consultar el **enunciado**, la **Guía para autores** y la **rúbrica** de manera conjunta: el enunciado define el problema y las evidencias específicas; la guía establece las normas editoriales comunes; y la rúbrica establece los criterios de evaluación.
+El estudiante deberá consultar conjuntamente el **enunciado**, la **Guía para autores**, la **rúbrica** y el **Informe técnico de referencia y base editable**: el enunciado define el problema y las evidencias específicas; la guía establece las normas científicas y editoriales comunes; la rúbrica establece los criterios de evaluación; y el informe de referencia muestra la materialización del formato y proporciona los estilos de trabajo. Su contenido científico y sus subsecciones específicas no deben copiarse al caso T1-CAF-001.
 
 ## Decisiones técnicas que debe resolver el informe
 
