@@ -1,17 +1,32 @@
 # Normas editoriales · Serie Técnica de Teledetección
 
-La **Serie Técnica de Teledetección** utiliza una estructura editorial común para todas las TAREAS. Las subsecciones se adaptan al problema técnico de cada caso, pero los grandes apartados permanecen estables:
+La **Serie Técnica de Teledetección** utiliza una arquitectura editorial común para todas las TAREAS. Las subsecciones se adaptan al problema técnico de cada caso, pero los grandes apartados permanecen estables.
 
-1. Resumen
-2. Introducción
-3. Área de estudio y datos
-4. Metodología
-5. Resultados
-6. Discusión
-7. Recomendación técnica
-8. Conclusiones
-9. Disponibilidad de datos y código
-10. Referencias
+## Arquitectura general
+
+**Elementos preliminares no numerados**
+
+- Título
+- Autores
+- Resumen
+- Palabras clave
+
+**Secciones numeradas**
+
+1. Introducción
+2. Área de estudio y datos
+3. Metodología
+4. Resultados
+5. Discusión
+6. Recomendación técnica
+7. Conclusiones
+
+**Elementos finales no numerados**
+
+- Disponibilidad de datos y código
+- Referencias
+
+Las subsecciones deben responder al problema metodológico de cada TAREA y no deben copiarse automáticamente de otro informe.
 
 ## Principios
 
@@ -24,4 +39,11 @@ La **Serie Técnica de Teledetección** utiliza una estructura editorial común 
 - Los procedimientos necesarios para reproducir el análisis deben quedar documentados.
 - La calidad se evalúa por rigor, evidencia y argumentación, no por extensión ni ornamentación.
 
-Estas normas se ampliarán progresivamente junto con la plantilla oficial y la guía para autores.
+## Documento editable de referencia
+
+El **Informe Técnico No. 02** funciona simultáneamente como ejemplo editorial terminado y como base editable de trabajo. El estudiante debe conservar su configuración de página, estilos y arquitectura principal, pero sustituir completamente su contenido científico y adaptar las subsecciones al problema específico de la TAREA.
+
+- [Informe técnico de referencia y base editable](../../examples/informe_tecnico_02/)
+- [Guía para autores](../guia_general/guia_para_autores.md)
+
+La **Guía para autores** constituye la norma editorial detallada de la Serie. El enunciado y la rúbrica de cada TAREA establecen las condiciones específicas del caso.
