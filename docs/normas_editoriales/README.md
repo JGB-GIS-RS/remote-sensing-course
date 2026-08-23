@@ -39,6 +39,14 @@ Las subsecciones deben responder al problema metodológico de cada TAREA y no de
 - Los procedimientos necesarios para reproducir el análisis deben quedar documentados.
 - La calidad se evalúa por rigor, evidencia y argumentación, no por extensión ni ornamentación.
 
+## Normas complementarias
+
+Las condiciones comunes para la elaboración de cartografía se aplican transversalmente a los informes de todas las TAREAS:
+
+- [Presentación de mapas en informes técnicos](mapas_informes_tecnicos.md)
+
+Los mapas se consideran **figuras científico-técnicas**, no planos de ingeniería. Deben priorizar interpretación espacial, claridad, reproducibilidad y jerarquía gráfica, sin incorporar cajetines o elementos ornamentales que no aporten a la lectura científica.
+
 ## Documento editable de referencia
 
 El **Informe Técnico No. 02** funciona simultáneamente como ejemplo editorial terminado y como base editable de trabajo. El estudiante debe conservar su configuración de página, estilos y arquitectura principal, pero sustituir completamente su contenido científico y adaptar las subsecciones al problema específico de la TAREA.
