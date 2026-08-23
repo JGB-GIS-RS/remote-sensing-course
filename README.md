@@ -41,6 +41,7 @@ Documentación del curso:
 
 - [Guía general](docs/guia_general/)
 - [Normas editoriales](docs/normas_editoriales/)
+- [Presentación de mapas en informes técnicos](docs/normas_editoriales/mapas_informes_tecnicos.md)
 - [Marco de rúbricas](docs/rubricas/)
 - [Informe técnico de referencia y base editable](examples/informe_tecnico_02/)
 
