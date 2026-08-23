@@ -15,11 +15,11 @@ Su contenido científico corresponde exclusivamente a ese estudio. **No constitu
 
 ## Archivo editable
 
-El archivo de trabajo de la Serie es:
+El único documento base de trabajo de la Serie es:
 
-`Informe_Tecnico_02_Referencia.docx`
+[**Informe_Tecnico_02_Referencia.docx**](Informe_Tecnico_02_Referencia.docx)
 
-El estudiante debe descargar una copia y utilizar **Guardar como** antes de iniciar su informe. El propósito es conservar la configuración editorial y los estilos del documento, no reutilizar su contenido científico.
+No existe una plantilla paralela. El estudiante debe descargar una copia de este documento y utilizar **Guardar como** antes de iniciar su informe. El propósito es conservar la configuración editorial y los estilos del documento, no reutilizar su contenido científico.
 
 ## Cómo utilizar el documento
 
@@ -71,7 +71,7 @@ Los informes conservan la siguiente estructura general:
 
 ### Resumen
 
-Síntesis autosuficiente del problema u objetivo, datos y enfoque metodológico esenciales, resultados principales y conclusión o decisión técnica. Como referencia editorial, se recomienda no exeder **200 palabras**.
+Síntesis autosuficiente del problema u objetivo, datos y enfoque metodológico esenciales, resultados principales y conclusión o decisión técnica. Como referencia editorial, se recomienda no exceder **200 palabras**.
 
 ### Palabras clave
 
